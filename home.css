@@ -1,0 +1,400 @@
+/* ============================================
+   SUGANTHAN S - A4 ONE PAGE RESUME
+   A4 = 210mm × 297mm
+   ============================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #e5e7eb;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+
+/* ============================================
+   A4 PAPER
+   ============================================ */
+
+.resume {
+    width: 210mm;
+    height: 297mm;
+
+    margin: 20px auto;
+
+    background: #ffffff;
+
+    padding: 12mm 14mm;
+
+    overflow: hidden;
+
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 6mm;
+
+    border-bottom: 2px solid #2563eb;
+}
+
+
+.header-left {
+    flex: 1;
+}
+
+
+.header h1 {
+    font-size: 27px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #111827;
+
+    margin-bottom: 2px;
+}
+
+
+.header h2 {
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: #4b5563;
+
+    margin-bottom: 9px;
+}
+
+
+/* ============================================
+   CONTACT
+   ============================================ */
+
+.contact {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 4px 15px;
+}
+
+
+.contact span {
+    font-size: 8.5px;
+
+    color: #4b5563;
+}
+
+
+/* ============================================
+   PROFILE IMAGE
+   ============================================ */
+
+.profile-image {
+    width: 32mm;
+    height: 32mm;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #2563eb;
+
+    margin-left: 10mm;
+}
+
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+section {
+    margin-top: 4mm;
+
+    page-break-inside: avoid;
+}
+
+
+/* ============================================
+   SECTION TITLE
+   ============================================ */
+
+section h3 {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #111827;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+
+    padding-bottom: 2px;
+
+    margin-bottom: 4px;
+
+    border-bottom: 1.5px solid #2563eb;
+}
+
+
+/* ============================================
+   NORMAL TEXT
+   ============================================ */
+
+p {
+    font-size: 8.7px;
+
+    line-height: 1.45;
+
+    color: #4b5563;
+
+    text-align: justify;
+}
+
+
+/* ============================================
+   EDUCATION
+   ============================================ */
+
+.education {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+}
+
+
+.education strong {
+    font-size: 9.5px;
+
+    color: #1f2937;
+}
+
+
+.education span {
+    font-size: 8.7px;
+
+    color: #4b5563;
+}
+
+
+/* ============================================
+   TECHNICAL SKILLS
+   ============================================ */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 5px 15px;
+}
+
+
+.skills-grid strong {
+    font-size: 8.8px;
+
+    color: #1f2937;
+}
+
+
+.skills-grid p {
+    font-size: 8.2px;
+
+    margin-top: 1px;
+
+    text-align: left;
+}
+
+
+/* ============================================
+   PROJECTS
+   ============================================ */
+
+.project {
+    margin-bottom: 3px;
+}
+
+
+.project > strong {
+    font-size: 9px;
+
+    color: #1f2937;
+}
+
+
+.project ul {
+    margin-left: 14px;
+
+    margin-top: 1px;
+}
+
+
+.project li {
+    font-size: 8.2px;
+
+    line-height: 1.35;
+
+    color: #4b5563;
+
+    margin-bottom: 1px;
+}
+
+
+/* ============================================
+   BOTTOM GRID
+   ============================================ */
+
+.bottom-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr 1.2fr;
+
+    gap: 12px;
+}
+
+
+.bottom-grid section {
+    margin-top: 4mm;
+}
+
+
+.bottom-grid p {
+    font-size: 8.2px;
+
+    text-align: left;
+}
+
+
+/* ============================================
+   DECLARATION
+   ============================================ */
+
+.declaration {
+    margin-top: 3mm;
+}
+
+
+.declaration p {
+    margin-bottom: 3px;
+}
+
+
+.declaration strong {
+    font-size: 8.5px;
+
+    color: #111827;
+}
+
+
+/* ============================================
+   PRINT - EXACT A4
+   ============================================ */
+
+@media print {
+
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+
+        margin: 0;
+
+        padding: 0;
+
+        background: #ffffff;
+    }
+
+    .resume {
+        width: 210mm;
+        height: 297mm;
+
+        margin: 0;
+
+        padding: 12mm 14mm;
+
+        box-shadow: none;
+
+        overflow: hidden;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+
+/* ============================================
+   MOBILE
+   ============================================ */
+
+@media screen and (max-width: 800px) {
+
+    html,
+    body {
+        background: #ffffff;
+    }
+
+    .resume {
+        width: 100%;
+        height: auto;
+
+        margin: 0;
+
+        padding: 25px;
+
+        box-shadow: none;
+    }
+
+    .header {
+        flex-direction: column-reverse;
+
+        text-align: center;
+    }
+
+    .profile-image {
+        margin: 0 0 15px 0;
+
+        width: 110px;
+        height: 110px;
+    }
+
+    .contact {
+        justify-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}
